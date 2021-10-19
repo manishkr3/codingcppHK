@@ -1,2 +1,2 @@
- int a;
-    static int b;
+    fin1 >> n1;
+    fin2 >> n2;
