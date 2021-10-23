@@ -4,7 +4,7 @@ double a, b, result;
 void read()
 {
     cout << "\n enter the two double numbers\n";
-    cin >> a >> b;t
+    cin >> a >> b;
 }
 void calc()
 {
