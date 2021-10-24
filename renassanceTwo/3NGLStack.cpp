@@ -1,7 +1,7 @@
 using namespace std;
 #include <bits/stdc++.h>
 vector<int> ngl(int *a, int n)
-{
+{//using stack
     stack<int> s;
     vector<int> v = {};
     for (int i = 0; i < n; i++)
@@ -21,6 +21,10 @@ vector<int> ngl(int *a, int n)
                 v.push_back(-1);
             }
             else
+            {
+                v.push_back(s.top());
+            }
+            
             {
                 v.push_back(s.top());
             }

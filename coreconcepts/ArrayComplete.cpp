@@ -18,6 +18,7 @@ int main()
     cout << "\n &arr+1 : " << &arr + 1;
  cout << "\n arr : " << *arr;
     cout<< "\n &arr[0] : " <<*( &arr); 
+    cout<<"\n"<<&arr;//address of address 
     return 0;
 }
 /* so we conclude that arr store is the address of the first element and &arr is the addreses of the whole bunch of the
