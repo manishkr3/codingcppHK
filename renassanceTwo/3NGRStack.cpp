@@ -1,10 +1,16 @@
+// #include <bits/stdc++.h>
+//**Nearest Greater Right to the element
+#include <iostream>
+#include <vector>
+#include <stack>
 using namespace std;
-#include <bits/stdc++.h>
 vector<int> ngR(int *a, int n)
 {
+    ios::sync_with_stdio(false);
+    cin.tie(0);
     stack<int> s;
     vector<int> v = {};
-    for (int i = n-1; i >-1; i--)
+    for (int i = n - 1; i > -1; i--)
     {
         if (s.empty())
         {
@@ -31,19 +37,21 @@ vector<int> ngR(int *a, int n)
 }
 int main()
 {
-    int n=5;
+    // int n=5;
     // cin >> n;
     // int *a = new int[n];
     // for (int i = 0; i < n; i++)
     // {
     //     cin >> a[i];
     // }
-    int a[n] = {2, 5, 3, 7, 5};
+
+    int a[] = {2, 5, 3, 7, 5}; //5,7,7,-1,-1
+    int n = sizeof(a) / sizeof(a[0]);
     vector<int> ans;
     ans = ngR(a, n);
     for (int i = 0; i < ans.size(); i++)
     {
-        cout << "  " << ans[i];
+        cout << "  " << ans[ans.size() - 1 - i];
     }
 
     return 0;

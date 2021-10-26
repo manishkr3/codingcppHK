@@ -1,0 +1,2 @@
+#if output is not coming then
+for loop infinite loop;check once again what you are inputing

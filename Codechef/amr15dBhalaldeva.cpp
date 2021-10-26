@@ -19,6 +19,10 @@ int main()
           "Enter name" message is not yet visible (because cout is buffered by default, 
           output is flushed/displayed on the console only on demand or when the buffer is full).
           */
+   
+   ios::sync_with_stdio(false); 
+   cin.tie(0); 
+
     int N, t;
     cin >> N;//first set the value by input if there is any then use it in te code
     vector<long long> Nimbadas(N);

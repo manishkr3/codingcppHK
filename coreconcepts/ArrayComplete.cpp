@@ -3,7 +3,12 @@ using namespace std;
 
 int main()
 {
-
+// cin >> n; a type of dynamic array
+    // int *a = new int[n];
+    // for (int i = 0; i < n; i++)
+    // {
+    //     cin >> a[i];
+    // }
     int arr[5] = {13, 23, 33, 54, 34};
     const int sizebysizeof = sizeof(arr) / sizeof(arr[0]);
     const int sizebyArrayArithmatic = *(&arr + 1) - arr;

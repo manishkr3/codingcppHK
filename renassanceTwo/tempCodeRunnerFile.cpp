@@ -1,3 +1,2 @@
- // {
-            //     v.push_back(s.top());
-            // }
+    cout << pq.top();
+    pq.pop();

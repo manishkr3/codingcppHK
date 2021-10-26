@@ -1,20 +1,17 @@
 #include <iostream>
 using namespace std;
 
-int reverseString(string s)
-{
-    int i = 0;
-    int l = s.length();
-    while (i < l - 1)
-    {
-        swap(s[i], s[l - 1 - i]);
-    }cout << s;
-    return 0;
-}
 int main()
 {
-
+    string st = "Manish Kumar is a Good Guy";
+    cout << "\n enter a string to reverse : ";
+    // cin >> st;
+    getline(cin,st);
     cout << "\n reverse string is : ";
-    reverseString("manish");
+    for (int i = 0; i < st.length(); i++)
+    {
+        cout << st[st.length() - 1 - i];
+    }
+
     return 0;
 }
