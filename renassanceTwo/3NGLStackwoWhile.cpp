@@ -47,9 +47,10 @@ vector<int> ngl(int *a, int n)
 }
 int main()
 {
-    int n = 5;
+    // int n = 9;
 
-    int a[n] = {2, 5, 3, 7, 5};
+    int a[] = {5, 3, 1, 2, 7,13,12,23,45};
+    int n = sizeof(a) / sizeof(a[0]);
     vector<int> ans;
     ans = ngl(a, n);
     for (int i = 0; i < ans.size(); i++)

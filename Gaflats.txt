@@ -1,2 +1,4 @@
 #if output is not coming then
 for loop infinite loop;check once again what you are inputing
+if condition = in place of == which always returns a tru condition and cause a logical erroa or 
+syntactical may be
