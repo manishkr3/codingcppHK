@@ -1,4 +1,2 @@
-   cout << "\n"
-         << st.pop();
-    cout << "\n"
-         << st.pop();
+ v.push_back(q.front());
+        q.pop();

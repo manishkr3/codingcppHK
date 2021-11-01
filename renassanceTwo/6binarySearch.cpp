@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+// #include <bits/stdc++.h>
 #include <iostream>
 using namespace std;
 int bSearch(int *a, int n, int x)
@@ -23,9 +23,9 @@ int bSearch(int *a, int n, int x)
 }
 int main()
 {
-	int arr[] = {1, 2, 3, 4, 5, 6, 8};
+	int arr[] = {1, 2, 3, 4, 5, 6, 8, 9};
 	int n = sizeof(arr) / sizeof(arr[0]);
-	int mid = bSearch(arr, n, 3);
+	int mid = bSearch(arr, n, 1);
 	cout << "the index of the element is " << mid;
 
 	return 0;

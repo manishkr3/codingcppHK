@@ -10,25 +10,14 @@ vector<int> ngl(int *a, int n)
     stack<int> s;
     vector<int> v = {};
     for (int i = 0; i < n; i++)
-    {
+    {//!errored code 
         if (s.empty())
         {
             v.push_back(-1);
         }
         else
         {
-            // while (!s.empty() && s.top() < a[i])
-            // {
-            //     s.pop();
-            // }
-            // if (s.empty())
-            // {
-            //     v.push_back(-1);
-            // }
-            // else
-            // {
-            //     v.push_back(s.top());
-            // }
+    
             if (s.top() > a[i])
             {
                 v.push_back(s.top());
@@ -39,9 +28,12 @@ vector<int> ngl(int *a, int n)
             {
                 v.push_back(-1);
                 s.pop();
+
             }
         }
-        s.push(a[i]);
+        s.push(a[i]);/*here when we reach 2 in the array ,at the time of 1  3 got popped and for
+        2 top element is 1 and in this wrong algo we are only targetting the top elements only 
+        thereforeits errored */
     }
     return v;
 }
