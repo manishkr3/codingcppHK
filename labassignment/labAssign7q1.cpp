@@ -19,8 +19,12 @@ int main()
     int arr[size] = {1, 2, 3, 4, 5};
     try
     {
-        arrayAccess(arr, 4);
+        cout << "\ncheck 1 : \n";
+        arrayAccess(arr, 6);
+        cout << "\ncheck 2 : \n";
+
         arrayAccess(arr, 2);
+        cout << "\nlt returns again back to the try block : \n";
         arrayAccess(arr, 5);
         arrayAccess(arr, 6);
     }
@@ -28,5 +32,6 @@ int main()
     {
         cout << "/n index out of bound";
     }
+    cout << "\ncontrol does't return to try block but continues from catch block on : ";
     return 0;
 }

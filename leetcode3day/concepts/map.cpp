@@ -7,14 +7,14 @@ using namespace std;
 vector<int> twoSum(vector<int> &nums, int target)
 {
 
-    unordered_map<int, int> map;
+    map<int, int> map;
     vector<int> v;
 
     for (int i = 0; i < nums.size(); i++)
         map[nums[i]] = i;
     for (auto it = map.cbegin(); it != map.cend(); ++it)
     {
-        std::cout << "first " << it->first << "second " << it->second << " "
+        std::cout << "first " << it->first << " and second " << it->second << " "
                   << "\n";
     };
 
@@ -41,7 +41,7 @@ int main()
 
     // for (int i = 0; i < nums.size(); i++)
     //     map[nums[i]] = i;
-    vector<int> v = {1, 2, 3, 4, 5};
+    vector<int> v = {1, 5, 2, 4, 3};
     vector<int> ans;
     ans = twoSum(v, 5);
     for (int x : ans)
