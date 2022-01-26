@@ -41,7 +41,31 @@ int main()
     {
         cout << iter2->first << " " << (*iter2).second << "\n";
     }
+
+    map<int, int> freq;
+    cout << "\nnew map: "<<"\n";
+    freq[45];
+    freq[4];
+    freq[4]++;
+    freq[4]++;
+    freq[4]++;
+    freq[4]++;
+    cout << freq.size() << " "<<freq[4]<< "\n";
+    cout << freq[55];
+    //it is very optimized for freq related things.
+   
+    
 }
+/* 
+    you can think of these as special array in which the indices(keys) of elements
+    can be negative ,very big or even strings in any order. these are like python
+    dictionaries or java treemap.
+    map<key_datatype,Value_datatype>
+    we can use freq["second"] instead of freq[1] 
+    ! very similar to sets keys here are ordered lexicographically
+    /*it here always returns a <key,value> pair therefore
+    (*it).second can be replaced by it-> second
+ */
 //map[i] is nothing you always needs something pointer in case of map
 // and use extensively in case of containers to make it a habit .
 // to use them .often.

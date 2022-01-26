@@ -25,7 +25,7 @@ public:
 int main()
 {
 
-    int num = 121;
+    double num = 123454321;
     Solution s;
     if (s.palicheck(num))
         cout << "\n it is palindrome : ";

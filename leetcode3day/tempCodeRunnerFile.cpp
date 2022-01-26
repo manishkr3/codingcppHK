@@ -1,44 +1,38 @@
-#include<bits/stdc++.h>
-#include<iostream>
-#include<vector>
+//#include<bits/stdc++.h>
+#include <iostream>
 using namespace std;
 class Solution
 {
+
 public:
-    int removeDuplicates(vector<int> &nums)
-    { 
-        auto en = nums.end();
-        for (auto i = nums.begin()+1; i != nums.end()-1; i++)
+    bool palicheck(int num)
+    {
+        double rvs_Num = 0;
+        double num_value = num;
+        while (num > 0)
         {
-        //    cout << "\n this is : ";
-            if (*(i)==*(i+1))
-            {
-                // cout << "\n loop : ";
-                nums.erase(i+1);
-                i--;
-            }
-          
+            rvs_Num = rvs_Num * 10 + num % 10;
+            num /= 10;
         }
-        auto j = nums.begin();
-        if (*j==*(j+1))
+        if (rvs_Num == num_value)
         {
-            nums.erase(nums.begin());
+            return true;
         }
-       
-        // cout << "\n you : ";
-        int size = nums.size();
-        // cout << size;
-        return size;
+
+        return false;
     }
-  
 };
-int main(){
-    Solution sol;
-    vector<int> nums = {1, 1, 1, 1, 2, 2, 3, 3, 4,4,4,4};
-    cout << sol.removeDuplicates(nums) << endl;
-    
-    for (int x : nums)
-        cout << " " << x;
+int main()
+{
+
+    int num = 121;
+    Solution s;
+    if (s.palicheck(num))
+        cout << "\n it is palindrome : ";
+    else
+    {
+        cout << "\n it is not a palindrome : ";
+    }
 
     return 0;
 }

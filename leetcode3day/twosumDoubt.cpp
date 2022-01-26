@@ -20,9 +20,12 @@ public:
         }
 
         for (int i = 0; i < nums.size(); i++)
-        {
+        {   
+            //first will ensure that 
             if (map.find(target - nums[i]) != map.end() && map[target - nums[i]] != i) /* 
-            why interchanging these two positions has a greate impact on the working */
+            why interchanging these two positions has a greate impact on the working
+            ans. because if first complement exist in the map then only their is  a question of is it is equal to the element itself or not,
+            and also the map.find() somehow works in nearly O(1) */
             {
 
                 auto it = map.find(target - nums[i]); //its just returns the pointer nothing else its very easy  to  may be binary search it is doing.
