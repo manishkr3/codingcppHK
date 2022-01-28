@@ -8,7 +8,7 @@ int main()
     ofstream out1, out2;
     ifstream in;
     out1.open("even.txt");
-    out2.open("out.txt");
+    out2.open("odd.txt");
     int n = *(&arr + 1) - arr; //for size of array
     cout << "\n " << n;
     while (n--)

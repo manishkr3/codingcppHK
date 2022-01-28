@@ -34,9 +34,9 @@ int search(int arr[], int s, int e, int key)
 // Driver program
 int main()
 {
-	int arr[] = { 4, 5, 6, 7, 8, 9, 1, 2, 3 };
+	int arr[] = {  6, 7, 8, 9, 1, 2, 3 };
 	int n = sizeof(arr) / sizeof(arr[0]);
-	int key = 6;
+	int key = 1;
 	int i = search(arr, 0, n - 1, key);
 
 	if (i != -1)

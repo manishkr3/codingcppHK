@@ -7,16 +7,16 @@ int bSearch(int *a, int n, int x)
 	int e = n - 1;
 	while (s <= e)
 	{
-		int mid = s + (e - s) / 2;
-		if (a[mid] == x)
-			return mid;
-		else if (a[mid] > x)
+		int m = s + (e - s) / 2;
+		if (a[m] == x)
+			return m;
+		else if (a[m] > x)
 		{
-			e = mid - 1;
+			e = m - 1;
 		}
 		else
 		{
-			s = mid + 1;
+			s = m + 1;
 		}
 	}
 	return -1;
@@ -25,8 +25,8 @@ int main()
 {
 	int arr[] = {1, 2, 3, 4, 5, 6, 8, 9};
 	int n = sizeof(arr) / sizeof(arr[0]);
-	int mid = bSearch(arr, n, 1);
-	cout << "the index of the element is " << mid;
+	int m = bSearch(arr, n, 1);
+	cout << "the index of the element is " << m;
 
 	return 0;
 }
@@ -42,21 +42,21 @@ using namespace std;
 int binarySearch(int arr[], int l, int r, int x)
 {
 	if (r >= l) {
-		int mid = l + (r - l) / 2;
+		int m = l + (r - l) / 2;
 
 		// If the element is present at the middle
 		// itself
-		if (arr[mid] == x)
-			return mid;
+		if (arr[m] == x)
+			return m;
 
-		// If element is smaller than mid, then
+		// If element is smaller than m, then
 		// it can only be present in left subarray
-		if (arr[mid] > x)
-			return binarySearch(arr, l, mid - 1, x);
+		if (arr[m] > x)
+			return binarySearch(arr, l, m - 1, x);
 
 		// Else the element can only be present
 		// in right subarray
-		return binarySearch(arr, mid + 1, r, x);
+		return binarySearch(arr, m + 1, r, x);
 	}
 
 	// We reach here when element is not

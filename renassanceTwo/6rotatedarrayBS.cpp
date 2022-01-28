@@ -20,7 +20,7 @@ int bSearch(int *a, int n, int x)
 
         if (a[s] < a[mid] && x < a[mid])
         { // left array is sorted
-            if (x > a[s] && x < a[mid])
+            if (x > a[s] &&     x < a[mid])
             { // x lies between s and mid index
                 e = mid - 1;
             }
