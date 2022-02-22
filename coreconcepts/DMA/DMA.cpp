@@ -7,11 +7,19 @@ int main()
     /* static memory allocation done before the program's execution whereas the DMA is done during the 
  programs execution or run time , it is more efficient,there is memory reusability and memory can be
  freed when not required. */
-  /*  //! g++ dma.cpp -o dmaa.exe;size .\dmaa.exe give size of each segment used
+ //dma serves a lot of fuctions at runtime not possible for sma
+   //! g++ dma.cpp -o dmaa.exe;size .\dmaa.exe ->give size of each segment used
+   //!we should avoid using calloc() for DMA because it does an extra task of initialising evey space
+   //!with zero (like in case of map and unordered_map)
     int n = 4;
     //  cin >> n;
     cout << "enter elements\n";
     int *ptr = (int *)malloc(n * sizeof(int));
+    //malloc returns an void type pointer of the heap memory chunk which typecasted to the 
+    //required type of the ptr, where we want to store the address.
+    /* because at the time of allocation malloc don't know what type of data is to be used so it
+    simply make a void pointer to that location offcourse on the basis of only size
+    but new does this task of typecasting implicitly */
     for (int i = 0; i < n; i++)
     {
         cin >> ptr[i];
@@ -31,22 +39,10 @@ int main()
         cout << ptr[i] << "\n";
     }
     free(ptr); 
-    */
-    //?Q. What is new keyword?
-    //new is a keyword used to dynamically initialize some integer or arr of integers in the heap.
-    int *m = new int(40); //so m stores address of the *m the value like a pointer;
-    delete m;//free the memory
-    cout << m<<"\n"<<*m<<"\n";
-    int *arr = new int[3];//arr of size 3
-    arr[0] = 1;
-    *(arr+1) = 5;//it is still working because the memory is not contiguous each one is seperate block
-    //! infact there are  3 blocks of memory allocated 
-    arr[2] = 3;
-    //delete arr;//used to free the memory after it no guarantee of values are still there or not
-    for (int i = 0; i < 3; i++)
-    {
-        cout << arr[i] << "\n";
-    }
+    
+   
 
     return 0;
 }
+//!doing extra labour in your tasks makes it inefficient.
+//the garbage values are just like some values stored previously in that location by the os.

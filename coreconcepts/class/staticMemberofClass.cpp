@@ -4,7 +4,8 @@ class Employee
 {
     int id;
     static int count;
-
+//!its main use is to have a common container which acts as global vaiable for all the objects
+//!but at the same time being private does not accessible by unregistered functions for that process.
 public:
     void setDataofEmployee()
     {

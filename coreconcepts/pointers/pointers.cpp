@@ -28,8 +28,6 @@ int main(){
     cout <<"the value of p is "<< p << "\n";
     //!as soon as pointer created it accupies some space in the memory according to compiler.
          cout << sizeof(p) << " " << sizeof(ptr);//so my compiler being 64bit gives 8bytes to pointer.
-//!am a disko dancer;
-   // #!jflsa;
-    //*and a man
+
     return 0;
 }
