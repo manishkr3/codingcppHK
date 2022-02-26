@@ -1,14 +1,15 @@
 #include <iostream>
+#include<bits/stdc++.h>
 using namespace std;
-struct Node
+struct Node//!node is not a keyword.
 {
     int data;
-    struct Node *next; //->slf referencin structure,it has a pointer which reference itself
+    Node *next; //->slf referencin structure,it has a pointer which reference itself
     // points to the same element like it
     // every node points to the next node means that it stores address of the next node
     // when the node points to the NULL then it means to declare that end of the LL
 };
-void linkedListTraversal(struct Node *ptr)
+void linkedListTraversal(Node *ptr)
 {
     while (ptr != NULL)
     {
@@ -16,33 +17,67 @@ void linkedListTraversal(struct Node *ptr)
         ptr = ptr->next;
     }
 }
-struct Node *insertAtFirst(struct Node *head, int data)
+Node *insertAtFirst(Node *head, int data)
 {
-    // struct Node *pt=new struct Node();
-    struct Node *pt = (struct Node *)malloc(sizeof(struct Node));
+    // Node *pt=new Node();
+    Node *pt = (Node *)malloc(sizeof(Node));
     pt->data = data; //(*pt).data=data;
     (*pt).next = head;
     return pt;
 }
-struct Node *insertAtIndex(struct Node *head,int data,int index){
-    struct Node *pt1 = (struct Node *)malloc(sizeof(struct Node));
-    // struct Node *pt2 = new struct Node(); int *t=new int();
-    struct Node *p = new struct Node();
-    p = head->next;
-    while((index-1)--){
-        ptr=d
+Node *insertAtmidIndex(Node *head,int data,int index){//not work at 0 index
+    Node *pt = (Node *)malloc(sizeof(Node));//we will insert pt
+    // Node *pt2 = new Node(); int *t=new int();
+    Node *p = head;
+    int i = index - 2;//to go before the mid index
+    while(i--){
+        p = p->next;
+    } // now p is at index-1;
+    pt->data = data;
+    pt->next = p->next; //this should be before the next statement
+    p->next = pt;
+    return head;
+}
+Node*insertAtEnd(Node* head,int data){
+    Node *pt = new Node(); // node to insert element at;this is default constructor
+    Node *p = head;
+    while (p->next!=NULL)
+    {
+        p = p->next;
     }
+    p->next = pt;
+    pt->next = NULL;
+    pt->data = data;
+    return head;
+}
+void displayElementsInSortedOrder(Node*head){
+    vector<int> v;
+    Node *p = head;
+    while (p->next!=NULL)
+    {
+        v.push_back(p->data) ;
+        p = p->next;
+    }
+    v.push_back(p->data);//for end element
+    sort(v.begin(), v.end());
+    cout << " the elements of the linked list in sorted order : ";
+    for(int x:v){
+        cout << x << " ";
+    }
+}
+void reverseNodes(Node*head){
+
 }
 int main()
 {
-    struct Node *head;
-    struct Node *second;
-    struct Node *third;
+    struct Node *head; // it does't matter wheather u write struct or not in C++ don't know bout C
+    Node *second;
+    Node *third;
 
     cout << "size of the NOde is : " << sizeof(Node) << "\n";
-    head = (struct Node *)malloc(sizeof(struct Node));
-    second = (struct Node *)malloc(sizeof(struct Node));
-    third = (struct Node *)malloc(sizeof(struct Node));
+    head = (Node *)malloc(sizeof(struct Node));//it does't matter wheather u write struct or not in C++ dont know bout C
+    second = (Node *)malloc(sizeof(Node));
+    third = (Node *)malloc(sizeof(Node));
 
     // now the dynamic memory allocation is done we can link all then locations using pointers.
     head->data = 7;
@@ -59,6 +94,15 @@ int main()
     cout<<"lets insert 36"<<"\n";
     head = insertAtFirst(head, 36);
     linkedListTraversal(head);
+    cout << "lets insert 34 at 3"<<"\n";
+    insertAtmidIndex(head, 34, 3);
+    linkedListTraversal(head);
+    cout << "lets insert at End "<<"\n";
+    
+    insertAtEnd(head, 355);
+    linkedListTraversal(head);
+
+    displayElementsInSortedOrder(head);
     return 0;
 }
 // linked list can be implemented using struct in c and also in cpp
