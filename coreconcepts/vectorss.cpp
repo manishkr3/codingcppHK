@@ -24,5 +24,15 @@ int main()
         cout << x << " ";
     cout << "\n";
     cout << v1[0]<<v[0];
+    vector<int>::iterator it;
+    it = v.begin();
+    v.erase(it);//erases element at it.
+    v.insert(v.begin(), 6);
+    v.insert(v.begin()+2, 45);
+    cout << "vecotor as follows\n";
+    for (auto j = v.begin(); j < v.end(); j++)
+    {
+        cout << *j << " ";
+    }
     return 0;
 }
