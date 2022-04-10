@@ -11,17 +11,18 @@ int main()
 
     // Map is an associative array
     //! map[key]=value ,also by map.insert({key,value})_this inside value is pair and also be written as make_pair(key,value)
-    unordered_map<string, int> uomarksMap;
+    unordered_map<string, int> uomarksMap;//*unordered map, it not sort itself in any order and thus most of the time they stay in order
+    //*you put them in.//dont ever trust unordered map order and use it in logic use it when order is not required
     uomarksMap["1Atul"] = 58;
+    uomarksMap["4Aditya"] = 65;
     uomarksMap["2Rohit"] = 57;
     uomarksMap["3Kishlay"] = 78;
-    uomarksMap["4Aditya"] = 65;
-    uomarksMap["5Sachin"] = 53;
-    map<string, int> omarksMap;
+    uomarksMap["5Sachin"] = 83;
+    map<string, int> omarksMap;//*ordered map, it get sorted according to keys in ascending order
     omarksMap["1Atul"] = 58;
+    omarksMap["4Aditya"] = 65;
     omarksMap["2Rohit"] = 57;
     omarksMap["3Kishlay"] = 78;
-    omarksMap["4Aditya"] = 65;
     omarksMap["5Sachin"] = 53;
 
     cout << "\n *** : " << omarksMap["5Sachin"];
@@ -39,7 +40,7 @@ int main()
 
     for (iter2 = omarksMap.begin(); iter2 != omarksMap.end(); iter2++)
     {
-        cout << iter2->first << " " << (*iter2).second << "\n";
+        cout << iter2->first << " " << (*iter2).second << "\n";//here first is for key and second is for value
     }
 
     map<int, int> freq;
