@@ -13,4 +13,22 @@ variables
     - use Plural for lists, arrays, vectors eg: vector<int>heights, vector<Strudent> students, etc
     - choose a camel case naming style for function and variables.
 functions:
+    - should be named according to the format <verb><noun> eg. getMarks, computeSalary, updateAge
+    - functions should do only one thing and do it well.
+    - functions should not be more than 7 lines long (main function can be max 10 lines)
+    - should follow ORP(one responsibility principle) i.e. it should do only one thing and do it well.
+Classes:
+    - use Pascal naming style to name your classes eg.Student,VehicleTime
     - 
+Global variables:
+    - they are safety hazards in your code.
+    - keep the scope of your variable as limited as possible.
+    - only constants are allowed to kept global.
+Imports:
+    - only include files which you are using.
+    - do not include "bits/stdc++.h" header file
+Tips:
+    - using the modern c++ syntax whenever possible
+    - using range based loops over iterator based 
+    - use classes over structs
+    - passing constant references as they are more efficient
