@@ -4,12 +4,12 @@ using namespace std;
 struct Node//!node is not a keyword.
 {
     int data;
-    Node *next; //->slf referencin structure,it has a pointer which reference itself
+    Node *next; //->self referencing structure,it has a pointer which reference itself
     // points to the same element like it
     // every node points to the next node means that it stores address of the next node
     // when the node points to the NULL then it means to declare that end of the LL
 };
-void linkedListTraversal(Node *ptr)
+void linkedListTraversal(Node *ptr)//traversal of ll
 {
     while (ptr != NULL)
     {
@@ -17,25 +17,25 @@ void linkedListTraversal(Node *ptr)
         ptr = ptr->next;
     }
 }
-Node *insertAtFirst(Node *head, int data)
+Node *insertAtFirst(Node *head, int data)//just add element before first element
 {
     // Node *pt=new Node();
-    Node *pt = (Node *)malloc(sizeof(Node));
+    Node *pt = (Node *)malloc(sizeof(Node));//or new
     pt->data = data; //(*pt).data=data;
     (*pt).next = head;
     return pt;
 }
-Node *insertAtmidIndex(Node *head,int data,int index){//not work at 0 index
+Node *insertAtAIndex(Node *head,int data,int index){//not work at 0th index because we specifically designing it for bw two elements
     Node *pt = (Node *)malloc(sizeof(Node));//we will insert pt
-    // Node *pt2 = new Node(); int *t=new int();
-    Node *p = head;
-    int i = index - 2;//to go before the mid index
-    while(i--){
-        p = p->next;
-    } // now p is at index-1;
+    // Node *pt2 = new Node(); int *t=new int(); while using new keyword we make a good use of constructor
+    Node *temp = head;
+    int i = index - 2;//to take our pointer to given index//-1 for user extra one and -1 for we want to be at 1 less before Index
+    while(i--){//assuming index given by user is i+1 mean 1st for i=0.
+        temp = temp->next;
+    } // now temp is at index-1 because p already was at 
     pt->data = data;
-    pt->next = p->next; //this should be before the next statement
-    p->next = pt;
+    pt->next = temp->next; //this should be before the next statement
+    temp->next = pt;
     return head;
 }
 Node*insertAtEnd(Node* head,int data){
@@ -95,7 +95,7 @@ int main()
     head = insertAtFirst(head, 36);
     linkedListTraversal(head);
     cout << "lets insert 34 at 3"<<"\n";
-    insertAtmidIndex(head, 34, 3);
+    insertAtAIndex(head, 34, 3);
     linkedListTraversal(head);
     cout << "lets insert at End "<<"\n";
     

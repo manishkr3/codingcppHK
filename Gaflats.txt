@@ -5,3 +5,12 @@ syntactical may be
 
 in leet code test case matterrs a lot (around 361 for one code) therefore be prepared especially
 for empty and single elemented arrays.
+
+//!code rules
+variables
+    - should be descriptive as far as possible like age,name not a,n etc.
+    - boolean variables should be named in the form of a question eg. isPermanantEmployee,isAdult etc
+    - use Plural for lists, arrays, vectors eg: vector<int>heights, vector<Strudent> students, etc
+    - choose a camel case naming style for function and variables.
+functions:
+    - 
