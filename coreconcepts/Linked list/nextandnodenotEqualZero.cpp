@@ -46,17 +46,22 @@ void insertAtHead(Node *&head, int val)
     head = newNode;
     newNode->data = val;
 }
-// bool searchLL(Node*head,int key){
-//     while (head!=NULL)
-//     {
-//         if (head->data==key)
-//         {
-//             return true;
-//         }
-//         head = head->next;
-//     }
-//     return false;
-// }
+void while1(Node*head){
+    while (head!=NULL)//this loop will run for even last node,at last what we get is pointer at NULL
+    {
+        cout << head->data << " ";
+        head = head->next;
+    }
+    cout << endl;
+}
+void while2(Node *head){
+    while (head->next!=NULL)//this loop will not run for last node,at last pointer will be at last node
+    {
+        cout << head->data << " ";
+        head = head->next;
+    }
+    cout << endl;
+}
 int main()
 {
     Node *head = new Node(1);
@@ -64,9 +69,7 @@ int main()
     insertAtTail(head, 3);
     insertAtTail(head, 4);
     displayLL(head);
-    insertAtHead(head, 0);
-    insertAtHead(head, -1);
-    displayLL(head);
-    // cout << searchLL(head, 3);
+    while1(head);
+    while2(head);
     return 0;
 }

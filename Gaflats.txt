@@ -31,4 +31,10 @@ Tips:
     - using the modern c++ syntax whenever possible
     - using range based loops over iterator based 
     - use classes over structs
-    - passing constant references as they are more efficient
+    - passing constant references as they are more efficient  
+    - it is a good practice to put conditions for all of the corner cases
+    - //ye kya bakwas sa scene h re if you are writing only definitions for functions and want to use one 
+      function in other one then declare it before the other or declare this function at start and define later.
+      ab samajh aya meko why aisa hota h ki declare alag se karo or define alag se - so that scope problem will
+      be resolved because cpp runs line by line. 
+                                    

@@ -43,7 +43,7 @@ void insertAtHead(Node*&head,int val){
     newNode->data = val;
 }
 bool searchLL(Node*head,int key){
-    while (head->next!=NULL)
+    while (head!=NULL)
     {
         if (head->data==key)
         {
@@ -63,6 +63,6 @@ int main()
     insertAtHead(head, 0);
     insertAtHead(head, -1);
     displayLL(head);
-    cout << searchLL(head, 90)<<endl;
+    cout << searchLL(head, 4)<<endl;
     return 0;
 }
