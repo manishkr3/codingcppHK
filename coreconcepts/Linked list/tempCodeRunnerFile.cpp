@@ -1,2 +1,2 @@
-
-    cout << "size of the NOde is : " << sizeof(Node)<<"\n";
+ Node*newHead=reverseLLIter(head);
+    displayLL(newHead);
