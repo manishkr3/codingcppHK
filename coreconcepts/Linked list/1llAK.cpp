@@ -7,13 +7,14 @@ public:
     Node *next;
     Node(int data)
     {
-        this->data = data;
+        this->data = data;//this here refer to to implicit pointer of calling object.
         next = NULL;
     }
+    Node();
 }; 
 void displayLL(Node*head){//we dont need want to change original head so don't cbr also now we can use head uncautiously
     while (head!=NULL)//we are reached at end pointer but we want to run whats inside the loop so
-    // we don't use head->next!=NULL
+    // we don't use head->next!=NULL, thus at end our pointer will be at NULL
     {
         cout << head->data << "->";
         head = head->next;
@@ -39,8 +40,8 @@ void insertAtTail(Node *&head, int val)//we need to change head if it is NULL th
 void insertAtHead(Node*&head,int val){
     Node *newNode = new Node(val);
     newNode->next = head;
-    head = newNode;
     newNode->data = val;
+    head = newNode;
 }
 bool searchLL(Node*head,int key){
     while (head!=NULL)
@@ -64,5 +65,8 @@ int main()
     insertAtHead(head, -1);
     displayLL(head);
     cout << searchLL(head, 4)<<endl;
+    Node *head2;//vo aisa tha ki struct bar bar ni likhna hota ya class khali node se kam chal jata h.
+    insertAtTail(head2,44);
+    displayLL(head2);
     return 0;
 }
