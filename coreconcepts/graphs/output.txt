@@ -1,1 +1,26 @@
-86
+enter the choice from Menu :
+1. Input New Graph 
+2. Add a vertex to the graph 
+3. Add an edge to the graph 
+4. Display Breadth First Traversal of Graph 
+5. Display Depth First Traversal of Graph 
+6. Exit 
+1.Input new graph
+ enter the first and second vertices of graphAdjacency list of the above graph is given by :
+1->2->3
+2->1->4->5->6->7
+3->1->7
+4->2
+5->2
+6->2
+7->2->3
+enter the choice from Menu :
+1. Input New Graph 
+2. Add a vertex to the graph 
+3. Add an edge to the graph 
+4. Display Breadth First Traversal of Graph 
+5. Display Depth First Traversal of Graph 
+6. Exit 
+6.exit
+ 
+exiting.......

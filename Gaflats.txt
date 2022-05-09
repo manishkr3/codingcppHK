@@ -42,8 +42,12 @@ Tips:
 
 
 competitive programming setup:
+
+
     #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
-#endif
+    #endif
+
+
 and create or automatically gets created input.txt and output.txt in the same directory.

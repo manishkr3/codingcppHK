@@ -31,7 +31,7 @@ void insertAtTail(Node *&head, int val)//we need to change head if it is NULL th
     }
     Node *temp=head;
     while(temp->next!=NULL){// we reached at last node and we don't want to run what inside the loop at last
-    //because it will shift us to next full NULL node.
+    //because it will shift us to next fully NULL node.
         temp = temp->next;
     }
     temp->next = newNode;

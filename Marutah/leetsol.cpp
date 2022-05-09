@@ -1,28 +1,17 @@
-#include <bits/stdc++.h>
-using namespace std;
-class Solution
+int count = 0;
+for (int i = 1; i < sqrt(X); i++)
 {
-public:
-    vector<int> twoSum(vector<int> nums, int target)
+    if (X % i == 0)
     {
-        vector<int> v={-1,-1};
-        int n = nums.size();
-        map<int, int> m;
-        for (int i = 0; i < n; i++)
+        int a = i;
+        int b = X / i;
+        if (a <= N && b <= N)
         {
-            m[nums[i]]
+            if (a == b)
+                count += 1;
+            else
+                count += 2;
         }
-        
-
-        return v;
     }
-};
-int main()
-{
-    Solution s;
-    vector<int> v={1,2,3,4};
-    int t = 4;
-   vector<int> ans= s.twoSum(v, t);
-   for (auto x:ans)
-       cout << x << " ";
 }
+return count;
