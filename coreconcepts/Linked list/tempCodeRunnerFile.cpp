@@ -1,2 +1,5 @@
- Node*newHead=reverseLLIter(head);
-    displayLL(newHead);
+  // if (isPalindrome("ava"))
+    // {
+    //     cout << "ava"
+    //          << ", ";
+    // }
