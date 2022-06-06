@@ -1,48 +1,73 @@
-/* 
+/*
 make a tree?
        1
       / \
     2    3
   /  \  / \
  4   5  6  7
+ preorder:1 2 4 5 3 6 7
+ inorder:4 2 5 1 6 3 7
+ postorder:4 5 2 6 7 3 1
  */
-#include<iostream>
+#include <iostream>
 using namespace std;
-struct Node
+class Node
 {
+public:
     int data;
-    struct Node *left;
-    struct Node *right;
+    Node *left;
+    Node *right;
 
-    Node(int val){//constructor for node
+    Node(int val)
+    { // constructor for node
         data = val;
         left = NULL;
         right = NULL;
     }
 };
-void preorderTraverse(Node* root){
-    if(root==NULL)
+void preorderTraverse(Node *root)
+{
+    if (root == NULL)
         return;
-    cout << root->data<<" ";
+    cout << root->data << " ";
     preorderTraverse(root->left);
-    preorderTraverse(root -> right);
+    preorderTraverse(root->right);
 }
-void inorderTraverse(Node*root){
-    if(root ==NULL)
+void inorderTraverse(Node *root)
+{
+    if (root == NULL)
         return;
-    if(root->left->left==NULL&&root->right->right==NULL)
-        cout << root->left;
-    
+    inorderTraverse(root->left);
+    cout << root->data << " ";
+    inorderTraverse(root->right);
 }
-int main(){
-    struct Node *root = new Node(1);
+void postorderTraverse(Node *root)
+{
+    if (root == NULL)
+        return;
+    postorderTraverse(root->left);
+    postorderTraverse(root->right);
+    cout << root->data << " ";
+}
+int main()
+{
+    Node *root = new Node(1);
     root->left = new Node(2);
     root->right = new Node(3);
     root->left->left = new Node(4);
     root->left->right = new Node(5);
-    root->right->left= new Node(6);
+    root->right->left = new Node(6);
     root->right->right = new Node(7);
+    cout << "preorder : ";
     preorderTraverse(root);
+    cout << "\n";
+    cout << "inorder : ";
+    inorderTraverse(root);
+    cout << "\n";
+    cout << "postorder : ";
+    postorderTraverse(root);
+    cout << "\n";
+
     return 0;
 }
 /*
