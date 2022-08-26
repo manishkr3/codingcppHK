@@ -4,7 +4,7 @@
 #include <vector>
 #include <stack>
 using namespace std;
-vector<int> ngR(int *a, int n)
+vector<int> nGR(int *a, int n)
 {
     ios::sync_with_stdio(false);
     cin.tie(0);
@@ -48,7 +48,7 @@ int main()
     int a[] = {2, 5, 3, 7, 5}; //5,7,7,-1,-1
     int n = sizeof(a) / sizeof(a[0]);
     vector<int> ans;
-    ans = ngR(a, n);
+    ans = nGR(a, n);
     for (int i = 0; i < ans.size(); i++)
     {
         cout << "  " << ans[ans.size() - 1 - i];

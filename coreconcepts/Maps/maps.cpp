@@ -53,8 +53,11 @@ int main()
     cout << freq.size() << " "<<freq[4]<< "\n";
     cout << freq[55];
     //it is very optimized for freq related things.
-   
-    
+
+    map<char, int> exp;
+    char M;
+    exp['M'] = 3;
+    cout << "your ans is : " << exp[M];
 }
 /* 
     you can think of these as special array in which the indices(keys) of elements

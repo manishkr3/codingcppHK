@@ -1,0 +1,12 @@
+
+- some implicity very subtle logics of mathematics are very crucial and have very sensitive dependence
+ on initial conditions therefore, I should focus from now on, on the mathematics part also of the 
+ code.
+
+
+ noticed
+1. while finding prime number, we need to check only upto less than equal to squareroot of the number.
+  Now a and b can't be both greater than the square root of n, since then the product a * b would be greater than sqrt(n) * sqrt(n) = n. So in any factorization of n, at least one of the factors must be smaller than the square root of n, and if we can't find any factors less than or equal to the square root, n must be a prime. eg. prime.cpp
+   Mean is that when we go above squareroot for a then b repeats values 0 to root a again. 
+2.when we making a check in a loop for certain conditions that verifies some formula or .. we first apply probability that in which case checks will be minimum to verify it. 
+like do it all with the smaller subset don't check unnecessary work by computer this will make it faster. eg. in 
