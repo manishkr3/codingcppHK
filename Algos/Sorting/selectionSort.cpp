@@ -1,4 +1,5 @@
 #include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 void printArray(int a[], int n)
 {
@@ -36,6 +37,7 @@ int main()
     int n = sizeof(arr) / sizeof(arr[0]);
 
     selectionSort(arr, n);
+    cout << endl;
     printArray(arr, n);
     return 0;
 }
