@@ -1,0 +1,7 @@
+#if output is not coming then
+for loop infinite loop;check once again what you are inputing
+if condition = in place of == which always returns a tru condition and cause a logical erroa or 
+syntactical may be
+
+in leet code test case matterrs a lot (around 361 for one code) therefore be prepared especially
+for empty and single elemented arrays.
