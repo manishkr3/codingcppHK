@@ -52,4 +52,11 @@ competitive programming setup:
 
 and create or automatically gets created input.txt and output.txt in the same directory.
 
+//!now important thing is intialising ds to 0
+- vector<vector<int>> adj(12,(12,0));
+- int adj[20][20];//declaring as public function initialises it to 0, but you then 
+  you can't put some specific size in it.
+- simplest is run a loop and initialize manually to 0 every element.
+
+
 

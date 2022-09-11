@@ -72,5 +72,5 @@ int main()
 //map[i] is nothing you always needs something pointer in case of map
 // and use extensively in case of containers to make it a habit .
 // to use them .often.
-//!we cant do it+1 in maps because they use non contiguous memsry but it++ somehow works ,also they use red black trees for internal implementation
+//!we cant do it+1 in maps because they use non contiguous memory but it++ somehow works ,also they use red black trees for internal implementation
 
