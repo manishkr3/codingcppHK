@@ -1,0 +1,1 @@
+{"name":"Local: adjListVoV","url":"/home/mkbhru/Documents/cppbn/coreconcepts/graphs/striver's graph/adjListVoV.cpp","tests":[{"id":1662878217575,"input":"5 6\n2 3\n3 1\n3 4\n0 4\n0 1\n1 2","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/mkbhru/Documents/cppbn/coreconcepts/graphs/striver's graph/adjListVoV.cpp","group":"local","local":true}
