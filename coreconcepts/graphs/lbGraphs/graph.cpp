@@ -1,16 +1,14 @@
-#include <iostream>
-#include <unordered_map>
-#include <list>
-#include <vector>
+#include<bits/stdc++.h>
 using namespace std;
 
-template <typename T> // generic graph.
+
+//template <typename int> // generic graph.
 class Graph
 {
 public:
-    unordered_map<T, list<T>> adjList;
+    unordered_map<int, list<int>> adjList;
 
-    void addEdge(T u, T v, bool direction)
+    void addEdge(int u, int v, bool direction)
     {
         // direction 0 for undirected graph and 1 for directed graph
 
@@ -29,41 +27,33 @@ public:
             cout << endl;
         }
     }
-    vector<int> bfs(int V, unordered_map<T, list<T>> adjList)
+    vector<int> bfs(int V)
     {
-        vector<int>bfs;
-        vector<int, bool> isVisited(V + 1);
+        queue<int> q;
+        vector<int> bfs;
+        // map<int, bool> vis(V, 0);
+        int vis[10]={0};
 
-        for (int i = 0; i < V + 1; i++)
-        {
-            if (!isVisited[i])
-            {
-                queue<int> q;
-                q.push(i);
-                vis[i] = 1;
-                while (!q.empty())
-                {
-                    int node = q.front();
-                    q.pop();
-                    bfs.push_back(node);
-
-                    for (auto i : adjList[node])
-                    {
-                        if (!isVisited[i])
-                        {
-                            q.push(i);
-                            isVisited[i] = 1;
-                        }
-                    }
-                }
+        q.push(0);
+        while(!q.empty()){
+            int frontNode = q.front();
+            q.pop();
+            if(!vis[frontNode]){
+                bfs.push_back(frontNode);
+            }
+            vis[frontNode] = 1;
+            for(auto i:adjList[frontNode]){
+                if(!vis[i])
+                    q.push(i);
             }
         }
+
         return bfs;
     }
 };
 int main()
 {
-    Graph<int> g;
+    Graph g;
     int n, m, u, v;
     cout << "enter no. of elements n and no. of edges m followed by edge nodes" << endl;
     cin >> n >> m;
@@ -73,6 +63,10 @@ int main()
         g.addEdge(u, v, 0);
     }
     g.printAdjList();
+    vector<int> ans = g.bfs(5);
+    cout << "\nyour bfs is:";
+    for (auto x : ans)
+        cout << x << " ";
 
     return 0;
 }

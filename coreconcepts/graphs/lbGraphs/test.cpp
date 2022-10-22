@@ -1,21 +1,26 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
-int main(){
-    int n=100;
-    int sum;
-    int x ;
-    int y ;
-    int z ;
-    int a ;
-    for (int i = 0; i < n; i++)
+int main()
+{
+    vector<vector<int>> v;
+    for (int i = 0; i < 9; i++)
     {
-         x = i + 1;
-         y = i + 2;
-         z = i + 2;
-         a = i + 2;
-        sum = x + y + z + a;
-        
+        vector<int> f;
+        for (int i = 0; i < i; i++)
+        {
+            f.push_back(i);
+        }
+        for(auto x:f)
+            cout << x << " ";
+        cout << endl;
+        v.push_back(f);
     }
-    cout << sum << endl;
+
+    for(auto i: v){
+        for(auto j: i)
+            cout << j << " ";
+        cout << endl;
+    }
+
     return 0;
 }
