@@ -5,6 +5,7 @@ class Node
 public:
     int data;
     Node *next;
+    //constructor
     Node(int data)
     {
         this->data = data;//this here refer to to implicit pointer of calling object.

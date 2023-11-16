@@ -68,6 +68,7 @@ int main()
     /*it here always returns a <key,value> pair therefore
     (*it).second can be replaced by it-> second
  */
+
 //map[i] is nothing you always needs something pointer in case of map
 // and use extensively in case of containers to make it a habit .
 // to use them .often.
